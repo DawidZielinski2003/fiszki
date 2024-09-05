@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE); 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.form {
+    margin: 50px auto;
+    width: 300px;
+    padding: 30px 25px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1.login-title {
+    color: black;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.login-input {
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 25px;
+    height: 25px;
+    width: calc(100% - 22px);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-input:focus {
+    border-color: #6e8095;
+    outline: none;
+}
+
+.login-button {
+    color: #fff;
+    background: #55a1ff;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.login-button:hover {
+    background: #4491e6;
+}
+
+.link {
+    color: #666;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.link a {
+    color: #666;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.profile-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.profile-pic-container {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px); 
+    height: calc(100% - 10px); 
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border-color 0.3s ease;
+}
+
+.profile-pic-container:hover .profile-pic {
+    border-color: rgba(85, 161, 255, 0.8); 
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .profile-pic-container .profile-pic {
+    border-color: #55a1ff;
+}
